@@ -1,3 +1,24 @@
-.SearchBox{
-    text-align: center;
+.SearchBox {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* TextField takes all remaining space, button stays fixed */
+.search-form .MuiTextField-root {
+  flex: 1 1 0;
+  min-width: 0; /* prevents MUI from overflowing the flex container */
+}
+
+.search-form .search-btn {
+  flex: 0 0 100px; /* fixed width — never shrinks or grows */
+  height: 56px;
+  width: 100px;
 }
